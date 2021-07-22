@@ -2,21 +2,27 @@
 <head>
     <title>Google</title>
     <meta author="@sauzdog">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
     body {
         background-color: #fff;
     }
-    ul {
+    body, input {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+    }
+    .top-nav {
         background-color: #fff;
         list-style: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
     }
-    .left-nav {
+    .nav-left-align {
         float: left;
     }
-    .right-nav {
+    .nav-right-align {
         float: right;
     }
     a {
@@ -29,42 +35,93 @@
         color: black;
         text-align: center;
     }
-    li a :hover {
-        text-decoration: underline;
-        background-color: red;
+    li :hover {
+        text-decoration:underline;
+    }
+
+    #signIn {
+        padding: 8px;
+        color: white;
+        background-color: rgba(36, 86, 250, 0.872);
+    }
+    
+    .google-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-bar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        padding: 8px;
+        border: 5px solid rgb(248,249,250);
+        border-radius: 50px;
+    }
+    .search-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+    }
+    .search-button {
+        background-color: rgb(248,249,250);
+        border-style: none;
+        padding: 14px;
+        margin-right :14px;
+    }
+    .footer {
+        background-color: rgb(218,220,224);
+    }
+    .bottom-nav {
+        list-style: none;
+        margin-bottom: 0vh;
     }
     </style>
 </head>
 <body>
     <!-- Nav bar-->
     <nav>
-        <ul>
-            <li class= "left-nav"><a href="#">About</a></li>
-            <li class= "left-nav"><a href="#">Store</a></li>
-            <li class= "right-nav">
-                <input type="button" name="SignIn" value="SignIn"><a href="#"></a></input>
+        <ul class="top-nav">
+            <li class= "nav-left-align"><a href="#">About</a></li>
+            <li class= "nav-left-align"><a href="#">Store</a></li>
+            <li class= "nav-right-align">
+                <input id ="signIn" type="button" name="SignIn" value="Sign in"><a href="#"></a></input>
             </li>
-            <li class= "right-nav"><a href="#">Images</a></li>
-            <li class= "right-nav"><a href="#">Gmail</a></li>
+            <li class= "nav-right-align"><a href="#">Images</a></li>
+            <li class= "nav-right-align"><a href="#">Gmail</a></li>
         </ul>
     </nav>
     <!--/*google logo*/-->
     <main>
-        <img class="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google homepage logo">
-    <!-- searchbar-->
-        <section>
+        <div>
+            <img class="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google homepage logo">
+        </div>
+        <!-- searchbar-->
+        <div>
             <form>
-                <label>
-                    <input class= "search-bar" type="text">
-                    <!--google search button and I'm feeling lucky button--><br>
-                    <input class="search-button-1" type="button" name="" value="Google Search">
-                    <input class="search-button-2" type="button" name="Lucky" value="I'm feeling Lucky">
-                </label>
+                <div class= "search-bar">
+                    <span class="material-icons">search</span><input id="searchBar" type="text" value="search">
+                </div>
+        <!--google search button and I'm feeling lucky button--><br>
+                <div class="search-buttons">
+                    <input class="search-button" id="button1" type="button" name="" value="Google Search">
+                    <input class="search-button" id="button2" type="button" name="Lucky" value="I'm feeling Lucky">
+                </div>
             </form>
-        </section>
+        </div>
     </main>
     <!--footer-->
+    <div class="footer">Australia
     <!--footer navigation-->
-    <footer>© Google 2021</footer>
+        <ul class="bottom-nav">
+            <li class="nav-left-align">Advertising</li>
+            <li class="nav-left-align">Business</li>
+            <li class="nav-left-align">How Search works</li>
+            <li class="nav-right-align">Settings</li>
+            <li class="nav-right-align">Terms</li>
+            <li class="nav-right-align">Privacy</li>
+        </ul>
+    </div>
 </body>
 </html>
