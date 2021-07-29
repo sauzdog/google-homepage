@@ -1,0 +1,229 @@
+<!DOCTYPE html5 lang="en"> 
+<head>
+    <title>Google</title>
+    <meta author="@sauzdog">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image" href="https://www.google.com/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    body {
+        background-color: #fff;
+    }
+    .content-section {
+        background-color: #fff;
+        min-height: 100%;
+        position: relative;
+    }
+    body, input {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+    }
+    .top-nav {
+        padding: 6px;
+        background-color: #fff;
+        list-style: none;
+        overflow: hidden;
+    }
+    .nav-left-align {
+        float: left;
+    }
+    .nav-right-align {
+        float: right;
+    }
+    .top-nav a {
+        text-decoration: none;
+    }
+    .top-nav li a {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        padding: 10px;
+        margin: 0 0 0 5px;
+        color: black;
+        text-align: center;
+    }
+    .top-nav li a:hover {
+        text-decoration: underline;
+    }
+
+    #signIn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 90px;
+        height: 35px;
+        color: white;
+        background-color: #2b7de9;
+        border-style: none;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    #signIn:hover {
+        background-color: #5094ed;
+        box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3), 0 1px 3px 1px rgba(66, 133, 244, 0.15);
+        text-decoration: none;
+    }
+    #appIcon {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        padding: 8px;
+        margin: 0 5px;
+
+    }
+    #appIcon:hover {
+        background-color: rgba(218, 220, 224, 0.386);
+        border-radius: 50px;
+    }
+    .google-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 55px;
+    }
+    .search-bar {
+        display: flex;
+        height: 44px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 40%;
+        border: 1.5px solid #dfe1e5;
+        border-radius: 24px;
+    }
+    .search-bar:hover {
+        background-color: #fff;
+        box-shadow: 0px 1px 6px rgba(32, 33, 36, 0.28);
+        border-color: rgba(223, 225, 229, 0);
+    }
+    #searchIcon {
+        margin-top: 3px;
+        justify-items: center;
+        font-size: 20px;
+        padding: 8px;
+        color: #9aa0a6;
+    }
+    #searchBar {
+        background-color: transparent;
+        border-style: none;
+        width: 100%;
+        outline: none;
+    }
+    .search-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+    }
+    .search-button {
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        padding: 14px;
+        margin-right :14px;
+        cursor: pointer;
+    }
+    .search-button:hover {
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        border-color: #dadce0;
+    }
+    .footer {
+        background-color: rgba(218, 220, 224, 0.386);
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 102px;
+    }
+    .location {
+        color: #70757a;
+        padding: 10px;
+        margin: 0 25px 0 25px;
+    }
+    .footer-line {
+        color: rgba(128, 128, 128, 0.482);
+        border-width: .1px;
+    }
+    .bottom-nav {
+        list-style: none;
+        overflow: hidden;
+    }
+    .bottom-nav a {
+        display: inline-block;
+        text-decoration: none;
+    }
+    .bottom-nav li a {
+        display: block;
+        color: #70757a;
+        text-align: center;
+        margin: 0 25 0 0;
+        padding-bottom: 15px;
+    }
+    .bottom-nav li :hover {
+        text-decoration:underline;
+    }
+    </style>
+</head>
+<body>
+    <div class="content-section">
+        <!-- Nav bar-->
+        <nav>
+            <ul class="top-nav">
+                <li class= "nav-left-align"><a href="https://about.google/?fg=1&utm_source=google-AU&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+                <li class= "nav-left-align"><a href="https://store.google.com/AU/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-AU">Store</a></li>
+                <li class= "nav-right-align">
+                    <a id ="signIn" href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Sign in</a>
+                </li>
+                <li class= "nav-right-align"><span class="material-icons" id="appIcon">apps</span></li>
+                <li class= "nav-right-align"><a href="https://www.google.com.au/imghp?hl=en&ogbl">Images</a></li>
+                <li class= "nav-right-align"><a href="https://www.google.com/intl/en-GB/gmail/about/">Gmail</a></li>
+            </ul>
+        </nav>
+    <!--/*google logo*/-->
+        <main>
+            <div>
+                <img class="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google homepage logo">
+            </div>
+            <br>
+            <br>
+        <!-- searchbar-->
+            <div>
+                <form>
+                    <div class= "search-bar">
+                        <span class="material-icons" id="searchIcon">search</span><input id="searchBar" type="text" value="">
+                    </div>
+        <!--google search button and I'm feeling lucky button--><br>
+                    <div class="search-buttons">
+                        <input class="search-button" id="button1" type="button" name="" value="Google Search">
+                        <input class="search-button" id="button2" type="button" name="Lucky" value="I'm Feeling Lucky">
+                    </div>
+                </form>
+            </div>
+        </main>
+    <!--footer-->
+        <div class="footer">
+            <div class="location">Australia</div>
+            <hr class="footer-line">
+    <!--footer navigation-->
+            <nav>
+                <ul class="bottom-nav">
+                    <li class="nav-left-align"><a href="https://ads.google.com/intl/en_au/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+                    <li class="nav-left-align"><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Business</a></li>
+                    <li class="nav-left-align"><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a></li>
+                    <li class="nav-right-align"><a href="#">Settings</a></li>
+                    <li class="nav-right-align"><a href="https://policies.google.com/terms?hl=en-AU&fg=1">Terms</a></li>
+                    <li class="nav-right-align"><a href="https://policies.google.com/privacy?hl=en-AU&fg=1">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
